@@ -1,0 +1,8 @@
+body {
+  background-color: rgb(174, 187, 240);
+}
+
+#map-view {
+  width: 425px;
+  height: 300px;
+}
