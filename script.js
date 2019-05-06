@@ -1,10 +1,11 @@
 console.log('connected');
 
-require(['esri/Map', 'esri/views/MapView', 'esri/widgets/Search'], function(
-  Map,
-  MapView,
-  Search
-) {
+require([
+  'esri/Map',
+  'esri/views/MapView',
+  'esri/widgets/Search',
+  'esri/widgets/BasemapToggle'
+], function(Map, MapView, Search, BasemapToggle) {
   var map = new Map({
     basemap: 'topo-vector'
   });
@@ -19,5 +20,11 @@ require(['esri/Map', 'esri/views/MapView', 'esri/widgets/Search'], function(
     view
   });
 
+  var basemapToggle = new BasemapToggle({
+    view,
+    nextBasemap: 'satellite'
+  });
+
   view.ui.add(search, 'top-right');
+  view.ui.add(basemapToggle, 'bottom-right');
 });
