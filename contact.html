@@ -1,18 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Exceptional Realty Group - Luxury Homes - Contact</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exceptional Realty Group - Luxury Homes - Contact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.11/esri/css/main.css"
+    />
+    <script src="https://js.arcgis.com/4.11/"></script>
+  </head>
+  <body>
+    <h1>Exceptional</h1>
+    <h2>Realty Group</h2>
 
-  <h1>Exceptional</h1>
-  <h2>Realty Group</h2>
+    <!-- links -->
+    <a href="index.html">About</a>
+    <a href="new-properties.html">New Properties</a>
+    <a href="real-estate-listings.html">Listings</a>
+    <a href="market-report.html">Market Report</a>
+    <a href="contact.html">Contact</a>
+    <a href="http://hud.gov" target="_blank">H.U.D.</a>
 
-  <!-- links -->
-  <a href="index.html">About</a> <a href="new-properties.html">New Properties</a> <a href="real-estate-listings.html">Listings</a> <a href="market-report.html">Market Report</a> <a href="contact.html">Contact</a> <a href="http://hud.gov" target="_blank">H.U.D.</a>
+    <h3>Contact</h3>
+    <!-- Map -->
+    <!-- WHOOPS! Don't worry! I generated a new key 😅-->
+    <div id="map-view"></div>
 
-  <h3>Contact</h3>
-  
-</body>
+    <!-- Contact Form -->
+
+    <form action="#" method="POST">
+      <label for="fullname">Name</label>
+      <input
+        id="fullname"
+        type="text"
+        name="fullname"
+        placeholder="Your name"
+        required
+      />
+      <label for="email">E-Mail</label>
+      <input
+        id="email"
+        type="text"
+        name="email"
+        placeholder="E-mail, please!"
+        required
+      />
+      <label for="phone">Phone Number</label>
+      <input
+        id="phone"
+        type="tel"
+        name="phone"
+        placeholder="Your phone number"
+      />
+      <label for="message">Message</label>
+      <textarea name="messate" id="message" cols="50" rows="10"></textarea>
+      <input type="submit" value="send" />
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
